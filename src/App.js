@@ -17,8 +17,8 @@ function App() {
 
 
   return (
-    <div style={{height:"100vh", backgroundColor:skyColor}} ref={skyRef}>
-      <div style={{height:"10%"}}>
+    <div style={{overflow:"hidden", height:"100vh", backgroundColor:skyColor}} ref={skyRef}>
+      <div style={{height:"10%", padding:"25px 10% 25px 10%"}}>
         <div style={{textAlign:"center", fontSize:"xx-large"}}>
           {temperature + " K"}
         </div>
@@ -28,8 +28,8 @@ function App() {
           onChange={() => {setTemperature(tempRef.current.value); setSkyColor(getSkyColor(tempRef.current.value)); setStarColor(getStarColor(tempRef.current.value))}}
         />
       </div>
-      <div style={{height:"90%", width:"100%", display:"flex", justifyContent:"center", alignItems:"center",margin:"auto"}}>
-        <p className="sun" style={{backgroundColor:starColor}} ref={starRef}/>
+      <div style={{position:"relative", overflow:"hidden", height:"90%", width:"100%", display:"flex", justifyContent:"center", alignItems:"center",margin:"auto"}}>
+        <div className="sun" style={{backgroundColor:starColor}} ref={starRef}/>
       </div>
     </div>
   );

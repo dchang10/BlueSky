@@ -46,12 +46,13 @@
 
 .sun {
     position: absolute;
-    width: 10vh;
-    height: 10vh;
+    width: 20vh;
+    height: 20vh;
     border: 1px solid transparent;
     border-radius: 50%;
     /*background: linear-gradient(120deg, #FFE5B4, #FFEB3B);*/
     box-shadow: 4px 4px 40px 20px #ffffff, -4px -4px 40px 20px #ffffff;
+    top: 47.5%;
     animation-name: rise;
     animation-duration: 5s;
     animation-iteration-count: 1;
@@ -60,11 +61,11 @@
 
 @keyframes rise {
     0% {
-        top: 80%;
+        top: 100%;
         box-shadow: none;
     }
     100% {
-        top: 44.5%;
+        top: 47.5%;
         box-shadow: 4px 4px 40px 20px #ffffff, -4px -4px 40px 20px #ffffff;
     }
 }
