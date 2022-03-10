@@ -52,6 +52,7 @@
     border-radius: 50%;
     /*background: linear-gradient(120deg, #FFE5B4, #FFEB3B);*/
     box-shadow: 4px 4px 40px 20px #ffffff, -4px -4px 40px 20px #ffffff;
+    top: 47.5%;
     animation-name: rise;
     animation-duration: 5s;
     animation-iteration-count: 1;
