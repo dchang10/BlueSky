@@ -18,7 +18,7 @@ function App() {
 
   return (
     <div style={{height:"100vh", backgroundColor:skyColor}} ref={skyRef}>
-      <div style={{height:"10%"}}>
+      <div style={{height:"10%", padding:"25px 10% 25px 10%"}}>
         <div style={{textAlign:"center", fontSize:"xx-large"}}>
           {temperature + " K"}
         </div>
