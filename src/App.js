@@ -1,21 +1,20 @@
-import logo from './logo.svg';
 import './App.css';
 import { create, all} from 'mathjs';
 import React, { useState, useRef, useEffect } from 'react';
+import * as xyzUtils from 'xyz-utils';
 
 const config = { };
 const math = create(all, config);
 
 function App() {
-  const [temperature, setTemperature] = useState(3300)
-  const [skyColor, setSkyColor] = useState(getSkyColor(3300));
-  const [starColor, setStarColor] = useState(getStarColor(3300));
+  const [temperature, setTemperature] = useState(2600)
+  const [skyColor, setSkyColor] = useState(getSkyColor(2600));
+  const [starColor, setStarColor] = useState(getStarColor(2600));
 
   const tempRef = useRef()
   const starRef = useRef()
   const skyRef = useRef()
 
-  let sun1 = <p style={{borderRadius:'50%', backgroundColor:"#ff0000", height:'200px', width:'200px'}} ref={starRef}/>
 
   return (
     <div style={{height:"100vh", backgroundColor:skyColor}} ref={skyRef}>
@@ -24,7 +23,7 @@ function App() {
           {temperature + " K"}
         </div>
         <input 
-          type="range" min="3300" max="10000" ref={tempRef} 
+          type="range" min="2600" max="10000" ref={tempRef} 
           style={{width:"100%", height:"25px", margin:"auto"}}
           onChange={() => {setTemperature(tempRef.current.value); setSkyColor(getSkyColor(tempRef.current.value)); setStarColor(getStarColor(tempRef.current.value))}}
         />
@@ -91,7 +90,8 @@ function getStarColor(temp) {
   let z = integrate(x=>B(x, temp)*Z(x), 380e-3, 780e-3, 100, 1e-10, 1e-10);
 
   let tot = Math.max(x, y, z)
-  let rgb = xyzTorgb(x/tot, y/tot, z/tot)
+  //let rgb = xyzTorgb(x/tot, y/tot, z/tot)
+  let rgb = xyzUtils.toRGB([x/tot, y/tot, z/tot])
   let red = rgb[0] 
   let green = rgb[1]
   let blue = rgb[2] 
@@ -110,7 +110,8 @@ function getSkyColor(temp) {
   //console.log("color(xyz "+Math.round(x/tot*100)/100 +" " + Math.round(100*y/tot)/100 + " "+ Math.round(100*z/tot)/100 + ")" )
   //return "color(xyz "+Math.round(x/tot*100)/100 +" " + Math.round(100*y/tot)/100 + " "+ Math.round(100*z/tot)/100 + ")" 
   let tot = Math.max(x,y,z)
-  let rgb = xyzTorgb(x/tot, y/tot, z/tot)
+  //let rgb = xyzTorgb(x/tot, y/tot, z/tot)
+  let rgb = xyzUtils.toRGB([x/tot, y/tot, z/tot])
   let red = rgb[0]
   let green = rgb[1]
   let blue = rgb[2]
