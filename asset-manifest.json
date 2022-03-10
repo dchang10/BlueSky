@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/blue-sky/static/css/main.eda26d79.css",
-    "main.js": "/blue-sky/static/js/main.2a0cf9a4.js",
+    "main.css": "/blue-sky/static/css/main.45161d83.css",
+    "main.js": "/blue-sky/static/js/main.19fc4120.js",
     "static/js/787.764e2204.chunk.js": "/blue-sky/static/js/787.764e2204.chunk.js",
     "index.html": "/blue-sky/index.html",
-    "main.eda26d79.css.map": "/blue-sky/static/css/main.eda26d79.css.map",
-    "main.2a0cf9a4.js.map": "/blue-sky/static/js/main.2a0cf9a4.js.map",
+    "main.45161d83.css.map": "/blue-sky/static/css/main.45161d83.css.map",
+    "main.19fc4120.js.map": "/blue-sky/static/js/main.19fc4120.js.map",
     "787.764e2204.chunk.js.map": "/blue-sky/static/js/787.764e2204.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.eda26d79.css",
-    "static/js/main.2a0cf9a4.js"
+    "static/css/main.45161d83.css",
+    "static/js/main.19fc4120.js"
   ]
 }
