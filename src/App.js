@@ -28,7 +28,7 @@ function App() {
           onChange={() => {setTemperature(tempRef.current.value); setSkyColor(getSkyColor(tempRef.current.value)); setStarColor(getStarColor(tempRef.current.value))}}
         />
       </div>
-      <div style={{height:"90%", width:"100vh", display:"flex", justifyContent:"center", alignItems:"center",margin:"auto"}}>
+      <div style={{height:"90%", width:"100%", display:"flex", justifyContent:"center", alignItems:"center",margin:"auto"}}>
         <p className="sun" style={{backgroundColor:starColor}} ref={starRef}/>
       </div>
     </div>

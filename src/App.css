@@ -46,8 +46,8 @@
 
 .sun {
     position: absolute;
-    width: 200px;
-    height: 200px;
+    width: 10vh;
+    height: 10vh;
     border: 1px solid transparent;
     border-radius: 50%;
     /*background: linear-gradient(120deg, #FFE5B4, #FFEB3B);*/
