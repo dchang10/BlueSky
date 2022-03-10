@@ -29,7 +29,7 @@ function App() {
         />
       </div>
       <div style={{position:"relative", overflow:"hidden", height:"90%", width:"100%", display:"flex", justifyContent:"center", alignItems:"center",margin:"auto"}}>
-        <p className="sun" style={{backgroundColor:starColor}} ref={starRef}/>
+        <div className="sun" style={{backgroundColor:starColor}} ref={starRef}/>
       </div>
     </div>
   );
